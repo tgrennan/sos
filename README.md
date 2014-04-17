@@ -1,6 +1,12 @@
-# sos
+Package `sos` manipulates a slice of strings.
 
-Package sos manipulates a slice of strings and can help with munging command
-line arguments.
+Fetch, build and install this package with GO tool:
 
-See also: [godoc](http://godoc.org/github.com/tgrennan/sos)
+	go get gopkg.in/tgrennan/sos.v0
+
+Import this package with:
+
+	import "gopkg.in/tgrennan/sos.v0"
+
+[![GoDoc](https://godoc.org/gopkg.in/tgrennan/sos.v0?status.png)](
+https://godoc.org/gopkg.in/tgrennan/sos.v0)

@@ -2,19 +2,21 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-// Package sos manipulates a slice of strings and can help with munging
-// command line arguments.
+// Package sos manipulates a slice of strings.
+// Use it to process command line line arguments like this:
 //
-//	sos := sos.New("sos", "-a", "A", "--b=B", "-c",  "-d", "--e",
-//		"-t", "NAME", "VALUE", "X", "Y", "Z")
+//	$ sos -a A --b=B -c -d --e -t NAME VALUE X Y Z
+//
+// ...
 //	var prog, aS, bS, cS, tName, tValue string
 //	var b, c, d, e, f bool
+//	sos := sos.New(os.Args[:]...)
 //	sos, prog = sos.Pop()
 //	sos, aS = sos.Arg("a")
 //	if sos, b = sos.Flag("b"); !b {
 //		sos, bS = sos.Arg("b")
 //	}
-//	if sos, c = sos.Flag("ccc"); !c {
+//	if sos, c = sos.Flag("c"); !c {
 //		sos, cS = sos.Arg("c")
 //	}
 //	sos, d = sos.Flag("d")
